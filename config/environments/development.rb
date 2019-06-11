@@ -29,7 +29,7 @@ Rails.application.configure do
 
 	config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  host = 'https://pure-chamber-66342.herokuapp.com/' # Don't use this literally; use your local dev host instead
+  host = 'https://pure-chamber-66342.herokuapp.com' # Don't use this literally; use your local dev host instead
   # Use this on the cloud IDE. https://pure-chamber-66342.herokuapp.com/
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   # Use this if developing on localhost.
