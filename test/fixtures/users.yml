@@ -6,6 +6,15 @@ michael:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+max:
+  name: Max Example
+  email: maxxreeves@icloud.com
+  password_digest: "chicken"
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+
 archer:
   name: Sterling Archer
   email: duchess@example.gov

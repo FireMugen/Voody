@@ -55,7 +55,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "voody2_#{Rails.env}"
 
-  config.action_mailer.perform_caching = false
+  # config.action_mailer.perform_caching = false
 	config.action_mailer.raise_delivery_errors = true
 	config.action_mailer.delivery_method = :smtp
 	host = 'https://pure-chamber-66342.herokuapp.com'

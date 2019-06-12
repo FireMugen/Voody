@@ -193,6 +193,62 @@ input {
   }
 }
 
-.navbar .navbar-fixed-top .navbar-inverse {
-	color: green !important;
+.navbar.navbar-fixed-top.navbar-inverse {
+	background-color: #31A552;
+	border: none;
+	color: white;
+	a {
+		color: white;
+	}
+	ul.dropdown-menu {
+		li {
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
+.center.jumbotron {
+	background-color: #7DD181;
+	height: 200% !important;
+	.welcome-title {
+		color: white;
+	}
+}
+
+.btn.btn-lg.btn-primary {
+	background-color: #FB8B24;
+	border: #B6F9C9;
+}
+
+.btn.btn-primary {
+	background-color: #FB8B24;
+	border: #B6F9C9;
+}
+
+.btn.btn-lg.btn-primary, .btn-group-lg > .btn.btn-primary {
+    background-color: #FB8B24;
+    border: #B6F9C9;
+		max-width: 15%;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse
+.navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #FB8B24;
+
+}
+
+.navbar-nav > li > .dropdown-menu {
+	background-color: #7DD181;
+}
+
+.search-text {
+	font-size: 200%;
+}
+
+ .form-control.front-page {
+	width: 50%;
+	margin: 10px auto;
+
 }

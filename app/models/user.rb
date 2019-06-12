@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+	has_many :recipes, dependent: :destroy
+
 	attr_accessor :remember_token, :activation_token
 	before_save   :downcase_email
 	before_create :create_activation_digest
@@ -35,8 +37,6 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
-	private
-
   # Remembers a user in the database for use in persistent sessions.
   def remember
     self.remember_token = User.new_token
@@ -54,6 +54,8 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+	private
 
 	# Converts email to all lower-case.
 	def downcase_email
