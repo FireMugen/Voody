@@ -1,24 +1,25 @@
-# README
+# Voody
+## A vegan and vegetarian recipe app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Functionality**
+1. Ability to make an secure account with a password
+2. Has several personal info storage features that display on your profile
+3. Ability to create recipes and search through all recipes on the home page
 
-Things you may want to cover:
 
-* Ruby version
+**Live Site**
+https://pure-chamber-66342.herokuapp.com/
 
-* System dependencies
 
-* Configuration
+**Languages**
+1. Ruby
+2. HTML
+3. CSS/SASS
 
-* Database creation
+Planned features:
+1. The ability to add comments on recipes
+2. The ability to favourite recipes and maybe users
+3. Lazy loading for recipes on home page
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### App By Max Reeves
