@@ -1,6 +1,8 @@
 # Voody
 ## A vegan and vegetarian recipe app
 
+![Alt text](app/assets/images/VoodyScreenShot.png)
+
 **Functionality**
 1. Ability to make an secure account with a password
 2. Has several personal info storage features that display on your profile
