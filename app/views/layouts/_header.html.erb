@@ -3,7 +3,7 @@
     <%= link_to "Voody", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "Add Recipe", recipes_new_path %></li>
 				<% if !logged_in? %>
 				<li><%= link_to "Sign up", signup_path%></li>
 				<% end %>
@@ -14,9 +14,8 @@
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li class="dropdown22"><%= link_to "Profile", current_user %></li>
+              <li class="dropdown22"><%= link_to "My Recipes", current_user %></li>
               <li class="dropdown22"><%= link_to "Settings", edit_user_path(current_user) %></li>
-							<li class="dropdown22"><%= link_to "My Recipes", recipes_show_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: :delete %>

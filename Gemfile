@@ -26,6 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker',          '1.7.3'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -52,6 +54,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+end
+
+group :production do
+  gem 'fog', '1.42'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

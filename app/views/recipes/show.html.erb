@@ -1,2 +1,16 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<% provide(:title, @recipe.name) %>
+<div class="row">
+	<div id="recipe-page" class="col-md-8">
+		<h3 class="recipe-title"> <%= @recipe.name %> </h3>
+		<br/>
+		<%= image_tag @recipe.picture.url if @recipe.picture? %>
+		<h4>Ingredients</h4>
+		<p> <%= @recipe.ingredients %> </p>
+		<h4>Method</h4>
+		<p> <%= @recipe.method %> </p>
+		<% if @recipe.user == current_user %>
+		<%= link_to "delete", @recipe, method: :delete,
+																	 data: { confirm: "Are you sure?" } %>
+		<% end %>
+	</div>
+</div>

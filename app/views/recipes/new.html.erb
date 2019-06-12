@@ -1,0 +1,21 @@
+<h1>Add a new recipe</h1>
+<%= form_for(@recipe) do |f| %>
+
+  <%= render 'shared/error_messages', object: @recipe %>
+
+  <%= f.label :name%>
+  <%= f.text_field :name, class: "form-control front-page" %>
+
+	<span class="picture">
+		<%= f.label :picture%>
+		<%= f.file_field :picture, class: "form-control front-page" %>
+	</span>
+
+  <%= f.label :ingredients %>
+  <%= f.text_area :ingredients, class: "form-control front-page" %>
+
+	<%= f.label :method %>
+	<%= f.text_area :method, class: "form-control front-page" %>
+
+  <%= f.submit 'Submit', class: "btn btn-lg btn-primary" %>
+<% end %>

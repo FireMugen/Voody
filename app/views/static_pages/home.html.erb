@@ -1,15 +1,22 @@
 <div class="center jumbotron">
   <h1 class="welcome-title">Welcome to Voody</h1>
+	<h2 class="search-text">Vegan and vegetarian recipe app</h2>
 
-
-	<%= form_tag(recipes_show_path) do %>
-		<h2 class="search-text">
-			Search Recipes
-		</h2>
-
-	<%= text_field_tag :recipes, "", class: "form-control front-page" %>
-
-  <%= submit_tag 'Search', class: "btn btn-lg btn-primary" %>
+	<%= form_tag(recipes_path, method: :get) do %>
+		<%= text_field_tag :name, params[:name], class: "form-control front-page" %>
+  	<%= submit_tag 'Search', name: nil, class: "btn btn-lg btn-primary" %>
 	<% end %>
-
 </div>
+
+		<% if @recipes.any? %>
+			<ul id="recipes">
+				<% @recipes.each do |recipe| %>
+					<li class="col-md-4" id="recipe-<%= recipe.id %>">
+				  	<span class="name"><%= link_to recipe.name, recipe %></span>
+				  	<span class="picture">
+							<%= link_to(image_tag(recipe.picture.url), recipe) if recipe.picture? %>
+				  	</span>
+					</li>
+					<% end %>
+			</ul>
+		<% end %>
