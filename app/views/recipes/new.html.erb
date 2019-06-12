@@ -1,5 +1,5 @@
 <h1>Add a new recipe</h1>
-<%= form_for(@recipe) do |f| %>
+<%= form_for(@recipe, html: { multipart: true }) do |f| %>
 
   <%= render 'shared/error_messages', object: @recipe %>
 
@@ -8,7 +8,7 @@
 
 	<span class="picture">
 		<%= f.label :picture%>
-		<%= f.file_field :picture, class: "form-control front-page" %>
+		<%= f.file_field :picture, class: "form-control front-page picture-control" %>
 	</span>
 
   <%= f.label :ingredients %>
